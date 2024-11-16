@@ -35,11 +35,28 @@
     let NewHeight=window.innerHeight; 
     let ScaleWidth=NewWidth/width;
     let ScaleHeight=NewHeight/height;
+
+    function resp(){
     const Measuments={
-    #Steam{
+    #Steam: {
     height:50*NewHeight,
     },
-     }
+     };
+    // Define styles for elements
+    
+            
+
+    // Apply styles dynamically
+    for (const [elementId, styles] of Object.entries(Measurements)) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            Object.entries(styles).forEach(([prop, value]) => {
+                element.style[prop] = `${value}px`;
+            });
+        }
+    }
+}
+resp(); 
         // Set the date and time for the event in GMT+6
       /*  const eventDate = new Date("2024-11-15T21:20:00+06:00").getTime();
 
