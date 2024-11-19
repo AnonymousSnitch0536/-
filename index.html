@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
 </head>
 <body>
   <!--  <h1>Time Left Until Event:</h1>
-    <div id="countdown">Loading...</div>-->
+    <div id="countdown">Loading...</div>--
 <div id="Steam">Steam-Engine</div>
     <script>
     const width=1280;
@@ -82,5 +82,74 @@ resp();
         // Update the countdown every second
         const interval = setInterval(updateCountdown, 100);*/
     </script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console Window with Transparency</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background: linear-gradient(135deg, #222, #444); /* Mock background content */
+      height: 200vh; /* Make the page scrollable */
+      color: white;
+    }
+
+    /* Transparent console overlay */
+    .console-overlay {
+      position: fixed;
+      width: 100%;
+      height: 50vh; /* Takes 50% of the screen height */
+      bottom: 0; /* Sticks to the bottom of the viewport */
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+      overflow-y: auto; /* Scrollable content inside */
+      border-top: 2px solid #0f0;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Fixed title bar */
+    .console-title {
+      position: sticky; /* Keeps it at the top of the console */
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 1px solid #0f0;
+      z-index: 10;
+    }
+
+    /* Console content area */
+    .console-content {
+      padding: 10px;
+      color: #0f0;
+    }
+
+    /* Console text lines */
+    .console-line {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <!-- Console Overlay -->
+  <div class="console-overlay">
+    <div class="console-title">Transparent Console - Fixed Title</div>
+    <div class="console-content">
+      <div class="console-line">Line 1: Scroll the page behind this console.</div>
+      <div class="console-line">Line 2: This content is inside the semi-transparent console.</div>
+      <!-- Add more lines dynamically -->
+      <script>
+        for (let i = 3; i <= 100; i++) {
+          document.write(`<div class="console-line">Line ${i}: Sample console content.</div>`);
+        }
+      </script>
+    </div>
+  </div>
 </body>
 </html>
