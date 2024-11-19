@@ -137,6 +137,7 @@ resp();
   </style>
 </head>
 <body>
+    <ul id=Id></ul>
   <!-- Console Overlay -->
   <div class="console-overlay">
     <div class="console-title">Transparent Console - Fixed Title</div>
@@ -148,7 +149,13 @@ resp();
         for (let i = 3; i <= 100; i++) {
           document.write(`<div class="console-line">Line ${i}: Sample console content.</div>`);
         }
-      </script>
+        const content=document.getElementById("Id");
+        const li=document.createElement("li");
+        for(let i=0;i<=100;i++){
+        li.textContent=`hi ${i}`; 
+        }
+        content.appendChild("li"); 
+        </script>
     </div>
   </div>
 </body>
